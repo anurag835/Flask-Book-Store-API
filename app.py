@@ -12,7 +12,7 @@ books = [
 
 @app.route('/', methods=['GET'])
 def home_page():
-    return 'Home Page'
+    return 'Welcome to the Bookstore API'
 
 # Route to get all books
 @app.route('/books', methods=['GET'])
@@ -61,7 +61,7 @@ def update_books(book_id):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
     
-# Route to update an existing book
+# Route to delete an existing book
 @app.route('/books/<int:book_id>/', methods=['DELETE'])
 def delete_books(book_id):
     try:
